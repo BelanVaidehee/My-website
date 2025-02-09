@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #888122;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        section img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Personal Website
+            <center>VAIDEHEE BELAN</center>
+        </h1>
+        <p>Learn more about me, my passions, and what I do!</p>
+    </header>
+
+    <nav>
+        <a href="javascript:void(0)" onclick="showSection('about')">About Me</a>
+        <a href="javascript:void(0)" onclick="showSection('hobbies')">My Hobbies</a>
+        <a href="javascript:void(0)" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div>
+            </div>
+            <p>Hello, myself <strong>Vaidehee B</strong>! I am a passionate web developer and designer. I have experience working with HTML, CSS, JavaScript, and various frameworks to build engaging websites. In addition to web development, I also enjoy graphic design, photography, and travel.</p>
+            <p>I am always eager to learn new technologies and improve my skills. Currently, I am focused on mastering front-end development and creating user-friendly interfaces. When I’m not coding, I love exploring new places, trying out different cuisines, and reading about emerging tech trends.</p>
+        </section>
+
+        <!-- My Hobbies Section -->
+        <section id="hobbies">
+            <h2>My Hobbies & Passions</h2>
+            <p>Outside of web development and design, I have a variety of hobbies that keep me inspired and balanced. Here are a few of them:</p>
+            <ul>
+                <li><strong>Photography:</strong> I love capturing the beauty of nature and cityscapes. Photography helps me see the world through a different lens and sparks my creativity.</li>
+                <li><strong>Traveling:</strong> Exploring new cultures, trying different foods, and experiencing new environments is one of my greatest passions. Every trip brings new stories and memories.</li>
+                <li><strong>Graphic Design:</strong> I enjoy experimenting with design tools to create stunning visual designs. I work on graphic projects that involve branding, posters, and digital art.</li>
+                <li><strong>Fitness & Yoga:</strong> Staying fit and mentally healthy is key to my overall well-being. I practice yoga regularly and also enjoy hiking and outdoor activities.</li>
+                <li><strong>Cooking:</strong> I love experimenting in the kitchen with new recipes, especially from different cultures. Cooking is a great way for me to unwind and get creative.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to send me an email at <a href="mailto:belanvaidehee@gmail.com">belanvaidehee@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vaidehee B | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Function to show the appropriate section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the clicked section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+
+        // Default to show the About Me section when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('about');
+        });
+    </script>
+</body>
+
+</html>
